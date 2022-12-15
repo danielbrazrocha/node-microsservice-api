@@ -4,6 +4,12 @@ import { NotificationsRepository } from '../../src/application/repositories/noti
 export class InMemoryNotificationsRepository
   implements NotificationsRepository
 {
+  async findById(notification: string): Promise<Notification | null> {
+    throw new Error('Method not implemented.');
+  }
+  async save(notification: Notification): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
   public notifications: Notification[] = [];
 
   async create(notification: Notification) {
